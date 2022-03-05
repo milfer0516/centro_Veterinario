@@ -155,7 +155,7 @@ body {
     padding: 20px 0;
 
     left: 100%;
-    transition: left 0.5s;
+    transition: left 0.8s;
   }
   .mascotas_remove {
     margin-top: 264px;
@@ -168,7 +168,7 @@ body {
   }
   .nav-menu-link:hover {
     background-color: #2d4263;
-    /* transition: 0.8ms; */
+    transition: 0.8ms;
   }
   .nav-toggle {
     display: block;
