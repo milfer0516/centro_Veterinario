@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-
+/* Globales */
+html {
+  font-size: 62.5%;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
+  font-size: 16px;
   font-family: "Lato", sans-serif;
 }
 .header {
@@ -20,7 +29,7 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 992px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -44,9 +53,10 @@ body {
   list-style: none;
 }
 .nav-menu-item {
+  display: flex;
   font-size: 18px;
   margin-right: 10px;
-  line-height: 80px;
+  line-height: 70px;
   text-transform: uppercase;
 }
 .nav-menu-link {
@@ -58,6 +68,16 @@ body {
 .nav-menu-link:hover {
   background-color: #4b6455;
   transition: 0.5s;
+}
+.nav-toggle {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  padding: 0 2rem;
+  line-height: 6rem;
+
+  display: none;
 }
 /* Section */
 .title {
@@ -98,7 +118,63 @@ body {
 .contenido-mascotas a {
   text-decoration: none;
   background-color: #086e7d;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
   color: #fff;
+  margin-top: 2rem;
+}
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    width: 50px;
+    margin-top: 4px;
+  }
+
+  .nav-menu-item {
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: #1a374d;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    left: 100%;
+    transition: left 0.5s;
+  }
+  .mascotas {
+    margin-top: 264px;
+  }
+  .nav-menu-link {
+    color: #fbf8f1;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 10px;
+  }
+  .nav-menu-link:hover {
+    background-color: #2d4263;
+    transition: 0.5s;
+  }
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-menu_visable {
+    left: 0;
+  }
 }
